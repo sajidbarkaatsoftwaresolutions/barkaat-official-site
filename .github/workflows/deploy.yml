@@ -1,8 +1,9 @@
- name: Deploy to GoDaddy
+name: Deploy to GoDaddy
 
   on:
     push:
-      branches: [main]
+      branches:
+        - main
     workflow_dispatch:
 
   jobs:
