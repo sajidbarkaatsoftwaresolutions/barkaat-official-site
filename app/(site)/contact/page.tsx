@@ -16,8 +16,8 @@ export default function ContactPage() {
             Start a conversation about your next release.
           </h2>
           <p className="hero-subtitle">
-            Share a short brief, and we'll respond with concrete next
-            steps, timelines, and how we'd approach your problem.
+            Share a short brief, and we&rsquo;ll respond with concrete next
+            steps, timelines, and how we&rsquo;d approach your problem.
           </p>
         </div>
       </section>
@@ -61,7 +61,7 @@ export default function ContactPage() {
           </div>
           <div className="section-body">
             Looking for an ongoing engineering partner instead of
-            one-off projects? Let's talk about how we can embed with your
+            one-off projects? Let&rsquo;s talk about how we can embed with your
             team.
           </div>
         </article>

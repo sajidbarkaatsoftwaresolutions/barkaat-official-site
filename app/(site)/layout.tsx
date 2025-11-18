@@ -62,7 +62,7 @@ export default function SiteLayout({
             <div className="brand-mark-inner">B</div>
           </div>
           <div className="sidebar-header-text">
-            <div className="sidebar-header-title">Barkaat Software</div>
+            <div className="sidebar-header-title">Barkaat Software Solutions</div>
             <div className="sidebar-header-subtitle">
               Digital product studio
             </div>

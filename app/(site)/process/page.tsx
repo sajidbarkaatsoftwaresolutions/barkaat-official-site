@@ -29,7 +29,7 @@ export default function ProcessPage() {
               <div className="section-icon">📆</div>
               <div className="section-name">Weekly demos</div>
             </div>
-            <div className="section-pill">Show, don't tell</div>
+            <div className="section-pill">Show, don&rsquo;t tell</div>
           </div>
           <div className="section-body">
             Frequent demos so stakeholders can see real progress and give

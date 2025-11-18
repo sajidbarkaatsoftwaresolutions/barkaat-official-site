@@ -14,7 +14,7 @@ export default function WorkPage() {
           <div className="hero-kicker">WORK</div>
           <h2 className="hero-title">Selected engagements &amp; case studies.</h2>
           <p className="hero-subtitle">
-            A sample of the systems we've designed and shipped—platforms
+            A sample of the systems we&rsquo;ve designed and shipped—platforms
             that handle real data, real users, and real business rules.
           </p>
         </div>

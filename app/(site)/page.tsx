@@ -218,7 +218,7 @@ export default function OverviewPage() {
           </div>
           <div className="section-body">
             Ready to explore an engagement or want a second opinion on your
-            architecture? Share a brief and we'll respond with concrete
+            architecture? Share a brief and we&rsquo;ll respond with concrete
             next steps.
           </div>
           <div className="section-footer">

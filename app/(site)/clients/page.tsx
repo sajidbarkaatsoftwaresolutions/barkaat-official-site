@@ -13,7 +13,7 @@ export default function ClientsPage() {
         <div className="hero-main">
           <div className="hero-kicker">CLIENTS</div>
           <h2 className="hero-title">
-            Partners, not just "projects".
+            Partners, not just &ldquo;projects&rdquo;.
           </h2>
           <p className="hero-subtitle">
             We work best with teams who value craft, want honest feedback,
