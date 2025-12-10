@@ -105,14 +105,7 @@ export default function SiteLayout({
         </ul>
 
         <div className="sidebar-bottom">
-          <div className="sidebar-meta">Signed in · Founder workspace</div>
-          <div className="profile-card">
-            <div className="profile-avatar">SB</div>
-            <div className="profile-info">
-              <div className="profile-name">Sajid Barkaat</div>
-              <div className="profile-role">Principal Solutions Architect</div>
-            </div>
-          </div>
+          <div className="sidebar-meta">Barkaat Software Solutions</div>
         </div>
       </aside>
 
