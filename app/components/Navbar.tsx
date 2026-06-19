@@ -46,7 +46,9 @@ export default function Navbar() {
             key={item.href}
             href={item.href}
             className={`text-[13px] font-medium text-text-secondary no-underline transition-colors duration-200 relative hover:text-accent-crimson after:content-[''] after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:bg-accent-crimson after:transition-[width] after:duration-200 ${
-              pathname === item.href ? "text-accent-crimson after:w-full" : "after:w-0"
+              pathname === item.href
+                ? "text-accent-crimson after:w-full"
+                : "after:w-0"
             }`}
           >
             {item.label}
@@ -88,11 +90,6 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/contact" className="block">
-              <button className="w-full mt-4 py-2 bg-accent-crimson text-white rounded-lg font-semibold transition-all hover:bg-accent-crimson-light">
-                Start Project
-              </button>
-            </Link>
           </div>
         </div>
       )}
