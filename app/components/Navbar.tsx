@@ -8,6 +8,7 @@ import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 
 const NAV_ITEMS = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   // { href: "/solutions", label: "Solutions" },
   // { href: "/process", label: "Process" },
