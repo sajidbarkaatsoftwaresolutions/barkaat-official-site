@@ -93,7 +93,7 @@ export default function Footer() {
                   {/* Cleaned up layout breaking for long domains on mobile */}
                   <a
                     href="mailto:test@barkaatsoftwaresolutions.com"
-                    className="hover:text-text-primary transition-colors block break-words max-w-[160px] sm:max-w-none"
+                    className="hover:text-text-primary transition-colors block max-w-[160px] sm:max-w-none"
                   >
                     test@barkaatsoftwaresolutions.com
                   </a>
