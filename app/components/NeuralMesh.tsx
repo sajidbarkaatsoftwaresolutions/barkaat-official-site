@@ -3,100 +3,154 @@
 import { useEffect, useRef } from "react";
 
 export default function NeuralMesh() {
-  const svgRef = useRef<SVGSVGElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const svg = svgRef.current;
-    if (!svg) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    // Generate random neural network nodes
-    const nodes: Array<{ x: number; y: number; r: number; opacity: number }> = [];
-    const nodeCount = 12;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-    // Create nodes
+    let animationFrameId: number;
+    let width = (canvas.width = canvas.offsetWidth);
+    let height = (canvas.height = canvas.offsetHeight);
+
+    const nodes: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      r: number;
+      opacity: number;
+      baseOpacity: number;
+    }> = [];
+    const nodeCount = 80; // Increased for better effect since canvas is fast
+    const connectDistance = 150; // pixels
+    const mouseRadius = 150;
+
+    let mouse = { x: -1000, y: -1000 };
+
+    // Initialize nodes
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        r: Math.random() * 2 + 1,
-        opacity: Math.random() * 0.6 + 0.4,
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.8,
+        vy: (Math.random() - 0.5) * 0.8,
+        r: Math.random() * 2 + 1.5,
+        baseOpacity: Math.random() * 0.5 + 0.3,
+        opacity: 0,
       });
     }
 
-    // Clear existing content
-    svg.innerHTML = '';
+    const draw = () => {
+      ctx.clearRect(0, 0, width, height);
 
-    // Add defs for gradient and filters
-    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-    const filter = document.createElementNS('http://www.w3.org/2000/svg', 'filter');
-    filter.setAttribute('id', 'glow');
-    
-    const feGaussianBlur = document.createElementNS('http://www.w3.org/2000/svg', 'feGaussianBlur');
-    feGaussianBlur.setAttribute('stdDeviation', '2');
-    
-    const feComponentTransfer = document.createElementNS('http://www.w3.org/2000/svg', 'feComponentTransfer');
-    const feFuncA = document.createElementNS('http://www.w3.org/2000/svg', 'feFuncA');
-    feFuncA.setAttribute('type', 'linear');
-    feFuncA.setAttribute('slope', '0.5');
-    
-    feComponentTransfer.appendChild(feFuncA);
-    filter.appendChild(feGaussianBlur);
-    filter.appendChild(feComponentTransfer);
-    defs.appendChild(filter);
-    svg.appendChild(defs);
+      // Update positions
+      for (let i = 0; i < nodes.length; i++) {
+        const node = nodes[i];
 
-    // Draw connections
-    const connectDistance = 40;
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+        // Mouse interaction (repel)
+        const dxMouse = mouse.x - node.x;
+        const dyMouse = mouse.y - node.y;
+        const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
 
-        if (distance < connectDistance) {
-          const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-          line.setAttribute('x1', `${nodes[i].x}%`);
-          line.setAttribute('y1', `${nodes[i].y}%`);
-          line.setAttribute('x2', `${nodes[j].x}%`);
-          line.setAttribute('y2', `${nodes[j].y}%`);
-          line.setAttribute('stroke', '#D3414E');
-          line.setAttribute('stroke-width', '0.5');
-          line.setAttribute('opacity', `${(1 - distance / connectDistance) * 0.3}`);
-          line.setAttribute('filter', 'url(#glow)');
-          svg.appendChild(line);
+        if (distMouse < mouseRadius) {
+          const force = (mouseRadius - distMouse) / mouseRadius;
+          node.x -= (dxMouse / distMouse) * force * 3;
+          node.y -= (dyMouse / distMouse) * force * 3;
+        }
+
+        node.x += node.vx;
+        node.y += node.vy;
+
+        // Bounce off walls
+        if (node.x < 0 || node.x > width) node.vx *= -1;
+        if (node.y < 0 || node.y > height) node.vy *= -1;
+
+        // Keep in bounds
+        node.x = Math.max(0, Math.min(width, node.x));
+        node.y = Math.max(0, Math.min(height, node.y));
+
+        // Pulsate opacity slightly
+        node.opacity = node.baseOpacity + Math.sin(Date.now() / 1000 + i) * 0.2;
+      }
+
+      // Draw lines
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < connectDistance) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            const opacity = (1 - dist / connectDistance) * 0.4;
+            ctx.strokeStyle = `rgba(211, 65, 78, ${opacity})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
         }
       }
-    }
 
-    // Draw nodes
-    nodes.forEach((node, index) => {
-      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      circle.setAttribute('cx', `${node.x}%`);
-      circle.setAttribute('cy', `${node.y}%`);
-      circle.setAttribute('r', `${node.r}`);
-      circle.setAttribute('fill', '#D3414E');
-      circle.setAttribute('opacity', `${node.opacity}`);
-      circle.setAttribute('filter', 'url(#glow)');
-      
-      // Add animation
-      const animateOpacity = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
-      animateOpacity.setAttribute('attributeName', 'opacity');
-      animateOpacity.setAttribute('values', `${node.opacity};${Math.min(1, node.opacity + 0.3)};${node.opacity}`);
-      animateOpacity.setAttribute('dur', `${Math.random() * 3 + 2}s`);
-      animateOpacity.setAttribute('repeatCount', 'indefinite');
-      
-      circle.appendChild(animateOpacity);
-      svg.appendChild(circle);
-    });
+      // Draw nodes
+      for (let i = 0; i < nodes.length; i++) {
+        const node = nodes[i];
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(211, 65, 78, ${node.opacity})`;
 
+        // Glow effect
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = "rgba(211, 65, 78, 0.6)";
+
+        ctx.fill();
+
+        // Reset shadow for lines
+        ctx.shadowBlur = 0;
+      }
+
+      animationFrameId = requestAnimationFrame(draw);
+    };
+
+    draw();
+
+    const handleResize = () => {
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    };
+
+    const handleMouseLeave = () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    };
+
+    window.addEventListener("resize", handleResize);
+    canvas.addEventListener("mousemove", handleMouseMove);
+    canvas.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener("resize", handleResize);
+      canvas.removeEventListener("mousemove", handleMouseMove);
+      canvas.removeEventListener("mouseleave", handleMouseLeave);
+    };
   }, []);
 
   return (
-    <svg
-      ref={svgRef}
-      className="neural-mesh-svg w-full h-full"
-      viewBox="0 0 100 100"
-      preserveAspectRatio="xMidYMid slice"
+    <canvas
+      ref={canvasRef}
+      className="neural-mesh-canvas w-full h-full absolute inset-0"
+      style={{ pointerEvents: "auto", cursor: "crosshair" }}
     />
   );
 }

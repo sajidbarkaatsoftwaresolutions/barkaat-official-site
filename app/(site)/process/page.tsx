@@ -22,17 +22,13 @@ export default function ProcessPage() {
   return (
     <>
       <Navbar />
-      <section className="hero-card">
-        <div className="hero-main">
-          {/* <div className="hero-kicker">PROCESS</div> */}
-          <div className="hero-kicker">OUR PROCESS</div>
-          <h2 className="hero-title">
-            {/* Calm, predictable, and transparent delivery. */}
+      <section className="mt-16 lg:mt-[72px] py-16 md:py-24 px-5 md:px-10 bg-transparent flex justify-center text-center">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
+          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">OUR PROCESS</div>
+          <h2 className="font-montserrat text-3xl md:text-5xl lg:text-[56px] font-extrabold text-text-primary leading-tight tracking-tight">
             Our Software Development Process
           </h2>
-          <p className="hero-subtitle">
-            {/* We design engagements that respect your time, create consistent
-            progress, and keep everyone aligned without chaos. */}
+          <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mt-2">
             We follow a structured and transparent approach to transform ideas
             into robust digital products. Our process ensures quality,
             efficiency, and alignment with your business goals:
@@ -40,167 +36,122 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      <section className="sections-grid">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto px-5 md:px-10 py-12">
         {/* === NEW CONTENT === */}
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">
-                <Search size={18} />
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                <Search size={18} className="text-accent-crimson" />
               </div>
-              <div className="section-name">
+              <div className="font-bold text-text-primary text-lg">
                 Discovery & Requirement Analysis
               </div>
             </div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Understanding your business, users, and goals. Gathering
             requirements, defining project scope, and identifying key features.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">
-                <Map size={18} />
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                <Map size={18} className="text-accent-crimson" />
               </div>
-              <div className="section-name">Planning & Strategy</div>
+              <div className="font-bold text-text-primary text-lg">Planning & Strategy</div>
             </div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Crafting a roadmap and technical architecture. Selecting the right
             technology stack (Node.js, .NET, Spring Boot, React, Vue, etc.).
             Estimating timelines and resources.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">
-                <PenTool size={18} />
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                <PenTool size={18} className="text-accent-crimson" />
               </div>
-              <div className="section-name">Design & Prototyping</div>
+              <div className="font-bold text-text-primary text-lg">Design & Prototyping</div>
             </div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Creating wireframes, mockups, and user experience flows. Iterating
             designs based on feedback before development.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">
-                <Code2 size={18} />
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                <Code2 size={18} className="text-accent-crimson" />
               </div>
-              <div className="section-name">Development & Implementation</div>
+              <div className="font-bold text-text-primary text-lg">Development & Implementation</div>
             </div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Writing clean, scalable, and maintainable code. Building backend
             services, APIs, and front-end interfaces. Following agile practices
             with regular sprints.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">
-                <ShieldCheck size={18} />
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                <ShieldCheck size={18} className="text-accent-crimson" />
               </div>
-              <div className="section-name">Testing & Quality Assurance</div>
+              <div className="font-bold text-text-primary text-lg">Testing & Quality Assurance</div>
             </div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Conducting rigorous functional, performance, and security testing.
             Ensuring the software works seamlessly across devices and platforms.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">
-                <Rocket size={18} />
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                <Rocket size={18} className="text-accent-crimson" />
               </div>
-              <div className="section-name">Deployment & Launch</div>
+              <div className="font-bold text-text-primary text-lg">Deployment & Launch</div>
             </div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Deploying the product to production environments. Monitoring initial
             performance and ensuring smooth launch.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">
-                <RefreshCw size={18} />
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                <RefreshCw size={18} className="text-accent-crimson" />
               </div>
-              <div className="section-name">
+              <div className="font-bold text-text-primary text-lg">
                 Maintenance & Continuous Improvement
               </div>
             </div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Providing support, updates, and performance optimizations. Iterating
             features based on user feedback and evolving requirements.
           </div>
         </article>
-
-        {/* === OLD CONTENT (Commented Out) === */}
-        {/* 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">📆</div>
-              <div className="section-name">Weekly demos</div>
-            </div>
-            <div className="section-pill">Show, don&rsquo;t tell</div>
-          </div>
-          <div className="section-body">
-            Frequent demos so stakeholders can see real progress and give
-            feedback while changes are still cheap.
-          </div>
-        </article>
-
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">🧾</div>
-              <div className="section-name">Roadmaps &amp; docs</div>
-            </div>
-            <div className="section-pill">Living artifacts</div>
-          </div>
-          <div className="section-body">
-            Lightweight documentation, technical diagrams, and clear
-            roadmaps that make onboarding new people painless.
-          </div>
-        </article>
-
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">🔁</div>
-              <div className="section-name">Iterative delivery</div>
-            </div>
-            <div className="section-pill">Ship weekly</div>
-          </div>
-          <div className="section-body">
-            Work in small, high-confidence batches, reducing risk while
-            still moving forward quickly.
-          </div>
-        </article>
-        */}
       </section>
 
-      <section className="sections-padding py-24">
-        <div className="sections-container">
+      <section className="py-16 md:py-24 px-5 md:px-10 py-24">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-section-xl font-bold text-neutral-light mb-4">
               Ready to start building?
@@ -219,7 +170,7 @@ export default function ProcessPage() {
       </section>
 
       <footer className="border-t border-border-primary bg-obsidian-800 mt-24">
-        <div className="sections-container py-12 text-center">
+        <div className="max-w-[1400px] mx-auto py-12 text-center">
           <div className="border-t border-border-primary pt-8 text-center text-text-muted text-sm">
             <p>© 2026 Barkaat Software Solutions. All rights reserved.</p>
           </div>

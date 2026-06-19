@@ -4,14 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_ITEMS = [
-  { href: "/services", label: "Services" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/process", label: "Process" },
+  { href: "/about", label: "About" },
+  // { href: "/solutions", label: "Solutions" },
+  // { href: "/process", label: "Process" },
   { href: "/clients", label: "Clients" },
   { href: "/work", label: "Work" },
-  { href: "/insights", label: "Insights" },
+  // { href: "/insights", label: "Insights" },
   { href: "/careers", label: "Careers" },
 ];
 
@@ -20,25 +22,31 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className="fixed top-0 inset-x-0 h-16 lg:h-[72px] bg-[var(--bg-navbar)] backdrop-blur-xl border-b border-border-primary z-50 flex items-center justify-between px-4 md:px-6 lg:px-10 gap-6 lg:gap-10">
       {/* Logo */}
-      <div className="navbar-logo">
+      <div className="flex items-center gap-3 shrink-0">
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-neural-crimson to-neural-crimson-light flex items-center justify-center text-white font-bold text-lg">
-            B
-          </div>
-          <span className="navbar-logo-text hidden md:block">BARKAAT</span>
+          <Image
+            src="/barkaat_software_solutions_logo.jpg"
+            alt="Barkaat Software Solutions Logo"
+            width={40}
+            height={40}
+            className="rounded-full object-cover border-2 border-border-primary"
+          />
+          <span className="font-montserrat text-base font-bold text-text-primary tracking-[-0.5px] hidden md:block">
+            BARKAAT SOFTWARE SOLUTIONS
+          </span>
         </Link>
       </div>
 
       {/* Desktop Navigation */}
-      <div className="navbar-nav hidden lg:flex">
+      <div className="hidden lg:flex items-center gap-8 flex-1 justify-center">
         {NAV_ITEMS.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className={`navbar-nav-link ${
-              pathname === item.href ? "active" : ""
+            className={`text-[13px] font-medium text-text-secondary no-underline transition-colors duration-200 relative hover:text-accent-crimson after:content-[''] after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:bg-accent-crimson after:transition-[width] after:duration-200 ${
+              pathname === item.href ? "text-accent-crimson after:w-full" : "after:w-0"
             }`}
           >
             {item.label}
@@ -46,14 +54,8 @@ export default function Navbar() {
         ))}
       </div>
 
-      {/* CTA & Mobile Menu */}
-      <div className="navbar-cta">
-        <Link href="/contact">
-          <button className="navbar-cta-button hidden md:block">
-            START PROJECT
-          </button>
-        </Link>
-
+      <div className="flex items-center gap-4 shrink-0">
+        <ThemeToggle />
         {/* Mobile Menu Button */}
         <button
           className="lg:hidden"

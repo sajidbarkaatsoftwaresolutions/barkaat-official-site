@@ -61,13 +61,13 @@ export default function CareersPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="hero">
-        <div className="hero-container">
-          <div className="hero-left">
-            <h1 className="hero-title">
-              SMALL, SENIOR, AND <span className="hero-title-accent">CRAFT-FOCUSED</span>
+      <section className="mt-16 lg:mt-[72px] py-12 md:py-[60px] pb-24 md:pb-[120px] px-5 md:px-10 bg-transparent relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
+          <div className="flex flex-col gap-8">
+            <h1 className="font-montserrat text-3xl md:text-5xl lg:text-[64px] font-extrabold leading-[1.1] tracking-[-0.02em] text-text-primary uppercase">
+              SMALL, SENIOR, AND <span className="text-accent-crimson">CRAFT-FOCUSED</span>
             </h1>
-            <p className="hero-description">
+            <p className="text-base md:text-lg leading-relaxed md:leading-[1.8] text-text-secondary max-w-[650px]">
               We look for engineers and designers who care deeply about quality, 
               communication, and outcomes. Work on complex systems with modern tools 
               and direct access to decision-makers.
@@ -85,7 +85,7 @@ export default function CareersPage() {
             </div>
           </div>
 
-          <div className="hero-right hidden lg:block" />
+          <div className="relative h-[300px] lg:h-[500px] hidden lg:block" />
         </div>
       </section>
 
@@ -93,9 +93,9 @@ export default function CareersPage() {
       <JobsTable jobs={jobListings} title="Open Positions" />
 
       {/* WHY BARKAAT */}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title mb-16">Why Barkaat?</h2>
+      <section className="py-12 md:py-20 px-5 md:px-10 bg-obsidian-900">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-10">
+          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-16 uppercase tracking-[-0.5px]">Why Barkaat?</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -124,7 +124,7 @@ export default function CareersPage() {
                 desc: "Conference budgets, learning stipends, and time to explore new technologies. We invest in your growth.",
               },
             ].map((item, idx) => (
-              <div key={idx} className="card">
+              <div key={idx} className="bg-obsidian-800 border border-border-primary rounded-2xl p-8 transition-all duration-200 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)]">
                 <h3 className="text-lg font-bold text-accent-crimson mb-3">
                   {item.title}
                 </h3>
@@ -138,10 +138,10 @@ export default function CareersPage() {
       </section>
 
       {/* OUR TEAM */}
-      <section className="section bg-obsidian-800 border-y border-border-primary">
-        <div className="container max-w-4xl mx-auto text-center">
-          <h2 className="section-title">Our Team</h2>
-          <p className="section-subtitle">
+      <section className="py-12 md:py-20 px-5 md:px-10 bg-obsidian-800 border-y border-border-primary">
+        <div className="max-w-[1400px] px-5 md:px-10 max-w-4xl mx-auto text-center">
+          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-12 uppercase tracking-[-0.5px]">Our Team</h2>
+          <p className="text-base md:text-lg text-text-secondary mb-8 leading-relaxed max-w-[800px] mx-auto">
             A global network of 20+ senior engineers, architects, and designers 
             committed to shipping excellence.
           </p>
@@ -165,15 +165,15 @@ export default function CareersPage() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="section">
-        <div className="container text-center max-w-2xl mx-auto">
-          <h2 className="section-title">Ready to Join?</h2>
-          <p className="section-subtitle">
+      <section className="py-12 md:py-20 px-5 md:px-10 bg-obsidian-900">
+        <div className="max-w-[1400px] px-5 md:px-10 text-center max-w-2xl mx-auto">
+          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-12 uppercase tracking-[-0.5px]">Ready to Join?</h2>
+          <p className="text-base md:text-lg text-text-secondary mb-8 leading-relaxed max-w-[800px] mx-auto">
             If you see yourself in our values and want to work on meaningful 
             projects with world-class engineers, let&rsquo;s talk.
           </p>
           <Link href="/contact">
-            <button className="btn btn-primary mt-8 text-lg px-8 py-4">
+            <button className="py-4 px-8 bg-accent-crimson text-text-primary border-none rounded-2xl text-lg font-semibold cursor-pointer transition-all duration-200 font-montserrat uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-accent-crimson-light hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(211,65,78,0.3)] mt-8">
               Apply or Learn More <ArrowRight className="w-5 h-5" />
             </button>
           </Link>

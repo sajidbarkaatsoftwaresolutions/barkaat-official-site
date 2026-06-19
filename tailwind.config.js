@@ -4,19 +4,28 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        /* Premium Dark Palette */
+        /* Premium Palette mapped to CSS Variables */
         'obsidian': {
-          900: '#12161A',
-          800: '#1A2026',
-          700: '#1E2330',
+          900: 'var(--bg-obsidian-900)',
+          800: 'var(--bg-obsidian-800)',
+          700: 'var(--bg-obsidian-700)',
         },
-        'neural-crimson': '#D3414E',
-        'neural-crimson-light': '#E78A8F',
+        'neural-crimson': 'var(--accent-crimson)',
+        'neural-crimson-light': 'var(--accent-crimson-light)',
+        'accent-crimson': 'var(--accent-crimson)',
+        'accent-crimson-light': 'var(--accent-crimson-light)',
+        'accent-crimson-muted': 'var(--accent-crimson-muted)',
+        'text-primary': 'var(--text-primary)',
+        'text-secondary': 'var(--text-secondary)',
+        'text-muted': 'var(--text-muted)',
+        'text-soft': 'var(--text-soft)',
+        'border-primary': 'var(--border-primary)',
+        'border-subtle': 'var(--border-subtle)',
         'neutral-light': '#D8DDE4',
-        'border-subtle': '#29323D',
       },
       fontFamily: {
         'montserrat': ['Montserrat', 'sans-serif'],

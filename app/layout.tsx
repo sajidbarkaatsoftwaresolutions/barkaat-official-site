@@ -7,15 +7,19 @@ export const metadata: Metadata = {
     "Premium engineering hub delivering cloud-native platforms, high-performance SaaS, and experience-driven systems. Senior-led digital product studio.",
 };
 
+import { ThemeProvider } from "./providers";
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="bg-obsidian-900 text-neutral-light">
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

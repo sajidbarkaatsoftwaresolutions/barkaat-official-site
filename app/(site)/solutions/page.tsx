@@ -13,13 +13,13 @@ export default function SolutionsPage() {
   return (
     <>
       <Navbar />
-      <section className="hero-card">
-        <div className="hero-main">
-          <div className="hero-kicker">SOLUTIONS</div>
-          <h2 className="hero-title">
+      <section className="mt-16 lg:mt-[72px] py-16 md:py-24 px-5 md:px-10 bg-transparent flex justify-center text-center">
+        <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
+          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">SOLUTIONS</div>
+          <h2 className="font-montserrat text-3xl md:text-5xl lg:text-[56px] font-extrabold text-text-primary leading-tight tracking-tight">
             Opinionated patterns for modern platforms.
           </h2>
-          <p className="hero-subtitle">
+          <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mt-2">
             Re-usable blueprints for SaaS products, analytics dashboards,
             multi-tenant systems, and integrations that save you months of
             trial-and-error.
@@ -27,52 +27,52 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      <section className="sections-grid">
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">📦</div>
-              <div className="section-name">B2B SaaS Foundations</div>
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto px-5 md:px-10 py-12">
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">📦</div>
+              <div className="font-bold text-text-primary text-lg">B2B SaaS Foundations</div>
             </div>
-            <div className="section-pill">Multi-tenant</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Multi-tenant</div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Authentication, billing, permissions, and tenant-aware data
             models set up in a way that scales without rewrites.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">📊</div>
-              <div className="section-name">Analytics Dashboards</div>
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">📊</div>
+              <div className="font-bold text-text-primary text-lg">Analytics Dashboards</div>
             </div>
-            <div className="section-pill">Data-first</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Data-first</div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Real-time dashboards, reporting views, and exports that turn
             raw data into meaningful insights for your team and customers.
           </div>
         </article>
 
-        <article className="section-card">
-          <div className="section-card-header">
-            <div className="section-card-title">
-              <div className="section-icon">🔌</div>
-              <div className="section-name">Integrations</div>
+        <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">🔌</div>
+              <div className="font-bold text-text-primary text-lg">Integrations</div>
             </div>
-            <div className="section-pill">APIs · Webhooks</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">APIs · Webhooks</div>
           </div>
-          <div className="section-body">
+          <div className="text-text-muted text-sm leading-relaxed">
             Robust integration patterns for third-party APIs, webhooks,
             and internal systems with proper monitoring and retries.
           </div>
         </article>
       </section>
 
-      <section className="sections-padding py-24">
-        <div className="sections-container">
+      <section className="py-16 md:py-24 px-5 md:px-10 py-24">
+        <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-section-xl font-bold text-neutral-light mb-4">
               Ready to explore these patterns?
@@ -91,7 +91,7 @@ export default function SolutionsPage() {
       </section>
 
       <footer className="border-t border-border-primary bg-obsidian-800 mt-24">
-        <div className="sections-container py-12 text-center">
+        <div className="max-w-[1400px] mx-auto py-12 text-center">
           <div className="border-t border-border-primary pt-8 text-center text-text-muted text-sm">
             <p>© 2026 Barkaat Software Solutions. All rights reserved.</p>
           </div>
