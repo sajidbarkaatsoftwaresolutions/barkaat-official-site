@@ -46,7 +46,7 @@ export default function Navbar() {
             key={item.href}
             href={item.href}
             className={`text-[13px] font-medium text-text-secondary no-underline transition-colors duration-200 relative hover:text-accent-crimson after:content-[''] after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:bg-accent-crimson after:transition-[width] after:duration-200 ${
-              pathname === item.href
+              pathname === item.href || pathname.startsWith(item.href + "/")
                 ? "text-accent-crimson after:w-full"
                 : "after:w-0"
             }`}
@@ -81,7 +81,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                  pathname === item.href
+                  pathname === item.href || pathname.startsWith(item.href + "/")
                     ? "bg-accent-crimson text-white"
                     : "text-text-secondary hover:bg-obsidian-700"
                 }`}
