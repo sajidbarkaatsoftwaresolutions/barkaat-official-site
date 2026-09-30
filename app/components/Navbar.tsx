@@ -16,6 +16,7 @@ const NAV_ITEMS = [
   { href: "/work", label: "Work" },
   // { href: "/insights", label: "Insights" },
   { href: "/careers", label: "Careers" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {
