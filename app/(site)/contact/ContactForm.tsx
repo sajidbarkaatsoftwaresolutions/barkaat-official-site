@@ -1,32 +1,35 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { sendEmail } from "@/app/actions/sendEmail";
 import { MessageSquare, Archive, Handshake, ArrowRight } from "lucide-react";
 
+/**
+ * Presents the contact form and opens a prefilled message in the visitor's
+ * email client so the statically hosted site does not require a server runtime.
+ */
 export default function ContactForm() {
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setLoading(true);
-    setSuccess(false);
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "");
+    const email = String(formData.get("email") ?? "");
+    const company = String(formData.get("company") ?? "");
+    const subject = String(formData.get("subject") ?? "Project inquiry");
+    const message = String(formData.get("message") ?? "");
 
-    try {
-      await sendEmail(formData);
-      setSuccess(true);
-      form.reset();
-    } catch (err) {
-      console.error("Error sending email:", err);
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Company: ${company || "Not provided"}`,
+      "",
+      message,
+    ].join("\n");
+
+    window.location.href = `mailto:hello@barkaat.dev?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
   }
 
   return (
@@ -171,18 +174,11 @@ export default function ContactForm() {
  
             <button
               type="submit"
-              disabled={loading}
               className="py-4 px-8 bg-accent-crimson text-text-primary border-none rounded-2xl text-lg font-semibold cursor-pointer transition-all duration-200 font-montserrat uppercase tracking-wider inline-flex items-center justify-center gap-2 hover:bg-accent-crimson-light hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(211,65,78,0.3)] w-full py-3"
             >
-              {loading ? "Sending..." : "Send Brief"} 
-              {!loading && <ArrowRight className="w-5 h-5" />}
+              Open Email Client
+              <ArrowRight className="w-5 h-5" />
             </button>
-
-            {success && (
-              <div className="p-4 bg-green-500 bg-opacity-10 border border-green-500 border-opacity-30 rounded-lg text-green-400 text-center font-semibold">
-                ✓ Message sent! We&rsquo;ll get back to you within 48 hours.
-              </div>
-            )}
           </form>
         </div>
       </section>

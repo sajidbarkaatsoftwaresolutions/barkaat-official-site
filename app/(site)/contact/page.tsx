@@ -1,8 +1,7 @@
 import Navbar from "../../components/Navbar";
 import ContactForm from "./ContactForm";
 
-export const runtime = "nodejs";
-
+/** Renders the statically exported contact page. */
 export default function ContactPage() {
   return (
     <>
