@@ -9,8 +9,8 @@ export default function Hero() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-20 items-center">
           <div className="flex flex-col gap-5 md:gap-8">
             <h1 className="font-montserrat text-3xl md:text-5xl lg:text-[64px] font-extrabold leading-[1.1] tracking-[-0.02em] text-text-primary uppercase mt-20 lg:mt-5">
-              INNOVATION MEETS{" "}
-              <span className="text-accent-crimson">EXCELLENCE</span>
+              Where Human and <span className="text-accent-crimson">AI </span>
+              Unite to build the future.
             </h1>
             <p className="text-sm md:text-lg leading-relaxed md:leading-[1.8] text-text-secondary max-w-[650px]">
               Welcome to Barkaat Software Solutions. We specialize in crafting
