@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Barkaat Software Solutions | Cloud, SaaS & Product Engineering",
+  title: "Barkaat Software Solutions | Engineering High-Scale Digital Ecosystems",
   description:
-    "Barkaat Software Solutions is a senior-led digital product studio delivering cloud-native platforms, SaaS apps, and high-quality engineering partnerships.",
+    "Premium engineering hub delivering cloud-native platforms, high-performance SaaS, and experience-driven systems. Senior-led digital product studio.",
 };
+
+import { ThemeProvider } from "./providers";
 
 export default function RootLayout({
   children,
@@ -13,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
