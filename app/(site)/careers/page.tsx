@@ -10,50 +10,7 @@ export const metadata: Metadata = {
     "Join a senior-first, remote-friendly engineering studio focused on meaningful work and modern tech.",
 };
 
-const jobListings = [
-  {
-    id: "1",
-    role: "Senior Full-Stack Engineer",
-    department: "Engineering",
-    location: "Remote",
-    level: "Senior",
-  },
-  {
-    id: "2",
-    role: "Product Architect",
-    department: "Architecture",
-    location: "Remote",
-    level: "Lead",
-  },
-  {
-    id: "3",
-    role: "DevOps & Infrastructure Engineer",
-    department: "Platform",
-    location: "Remote",
-    level: "Senior",
-  },
-  {
-    id: "4",
-    role: "UI/UX Designer",
-    department: "Design",
-    location: "Remote",
-    level: "Mid",
-  },
-  {
-    id: "5",
-    role: "Cloud Security Specialist",
-    department: "Security",
-    location: "Remote",
-    level: "Senior",
-  },
-  {
-    id: "6",
-    role: "Tech Lead - Frontend",
-    department: "Engineering",
-    location: "Remote",
-    level: "Lead",
-  },
-];
+const jobListings: any = [];
 
 export default function CareersPage() {
   return (
