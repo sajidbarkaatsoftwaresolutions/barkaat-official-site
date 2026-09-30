@@ -65,12 +65,13 @@ export default function CareersPage() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
           <div className="flex flex-col gap-8">
             <h1 className="font-montserrat text-3xl md:text-5xl lg:text-[64px] font-extrabold leading-[1.1] tracking-[-0.02em] text-text-primary uppercase">
-              SMALL, SENIOR, AND <span className="text-accent-crimson">CRAFT-FOCUSED</span>
+              SMALL, SENIOR, AND{" "}
+              <span className="text-accent-crimson">CRAFT-FOCUSED</span>
             </h1>
             <p className="text-base md:text-lg leading-relaxed md:leading-[1.8] text-text-secondary max-w-[650px]">
-              We look for engineers and designers who care deeply about quality, 
-              communication, and outcomes. Work on complex systems with modern tools 
-              and direct access to decision-makers.
+              We look for engineers and designers who care deeply about quality,
+              communication, and outcomes. Work on complex systems with modern
+              tools and direct access to decision-makers.
             </p>
             <div className="flex gap-4 mt-8">
               <button className="text-text-secondary text-sm font-semibold">
@@ -95,7 +96,9 @@ export default function CareersPage() {
       {/* WHY BARKAAT */}
       <section className="py-12 md:py-20 px-5 md:px-10 bg-obsidian-900">
         <div className="max-w-[1400px] mx-auto px-5 md:px-10">
-          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-16 uppercase tracking-[-0.5px]">Why Barkaat?</h2>
+          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-16 uppercase tracking-[-0.5px]">
+            Why Barkaat?
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -124,7 +127,10 @@ export default function CareersPage() {
                 desc: "Conference budgets, learning stipends, and time to explore new technologies. We invest in your growth.",
               },
             ].map((item, idx) => (
-              <div key={idx} className="bg-obsidian-800 border border-border-primary rounded-2xl p-8 transition-all duration-200 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)]">
+              <div
+                key={idx}
+                className="bg-obsidian-800 border border-border-primary rounded-2xl p-8 transition-all duration-200 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)]"
+              >
                 <h3 className="text-lg font-bold text-accent-crimson mb-3">
                   {item.title}
                 </h3>
@@ -140,9 +146,11 @@ export default function CareersPage() {
       {/* OUR TEAM */}
       <section className="py-12 md:py-20 px-5 md:px-10 bg-obsidian-800 border-y border-border-primary">
         <div className="max-w-[1400px] px-5 md:px-10 max-w-4xl mx-auto text-center">
-          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-12 uppercase tracking-[-0.5px]">Our Team</h2>
+          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-12 uppercase tracking-[-0.5px]">
+            Our Team
+          </h2>
           <p className="text-base md:text-lg text-text-secondary mb-8 leading-relaxed max-w-[800px] mx-auto">
-            A global network of 20+ senior engineers, architects, and designers 
+            A global network of 20+ senior engineers, architects, and designers
             committed to shipping excellence.
           </p>
 
@@ -167,9 +175,11 @@ export default function CareersPage() {
       {/* CTA SECTION */}
       <section className="py-12 md:py-20 px-5 md:px-10 bg-obsidian-900">
         <div className="max-w-[1400px] px-5 md:px-10 text-center max-w-2xl mx-auto">
-          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-12 uppercase tracking-[-0.5px]">Ready to Join?</h2>
+          <h2 className="font-montserrat text-2xl md:text-3xl lg:text-[48px] font-extrabold text-text-primary mb-12 uppercase tracking-[-0.5px]">
+            Ready to Join?
+          </h2>
           <p className="text-base md:text-lg text-text-secondary mb-8 leading-relaxed max-w-[800px] mx-auto">
-            If you see yourself in our values and want to work on meaningful 
+            If you see yourself in our values and want to work on meaningful
             projects with world-class engineers, let&rsquo;s talk.
           </p>
           <Link href="/contact">
@@ -179,52 +189,6 @@ export default function CareersPage() {
           </Link>
         </div>
       </section>
-
-      {/* FOOTER */}
-      <footer className="bg-obsidian-900 border-t border-border-primary py-16">
-        <div className="container max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <h4 className="font-bold text-text-primary mb-4">BARKAAT</h4>
-              <p className="text-text-muted text-sm">
-                Engineering high-scale digital ecosystems.
-              </p>
-            </div>
-            <div>
-              <h5 className="text-sm font-semibold text-text-primary mb-4 uppercase">
-                SERVICES
-              </h5>
-              <ul className="space-y-2 text-text-muted text-sm">
-                <li><Link href="/services">All Services</Link></li>
-                <li><Link href="/solutions">Solutions</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-sm font-semibold text-text-primary mb-4 uppercase">
-                COMPANY
-              </h5>
-              <ul className="space-y-2 text-text-muted text-sm">
-                <li><Link href="/work">Work</Link></li>
-                <li><Link href="/insights">Insights</Link></li>
-                <li><Link href="/careers">Careers</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-sm font-semibold text-text-primary mb-4 uppercase">
-                CONTACT
-              </h5>
-              <ul className="space-y-2 text-text-muted text-sm">
-                <li><a href="mailto:hello@barkaat.dev">hello@barkaat.dev</a></li>
-                <li><Link href="/contact">Get in Touch</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border-primary pt-8 text-center text-text-muted text-sm">
-            <p>© 2026 Barkaat Software Solutions. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
