@@ -15,8 +15,12 @@ export default function WorkPage() {
       <Navbar />
       <section className="mt-16 lg:mt-[72px] py-16 md:py-24 px-5 md:px-10 bg-transparent flex justify-center text-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
-          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">WORK</div>
-          <h2 className="font-montserrat text-3xl md:text-5xl lg:text-[56px] font-extrabold text-text-primary leading-tight tracking-tight">Selected engagements &amp; case studies.</h2>
+          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">
+            WORK
+          </div>
+          <h2 className="font-montserrat text-3xl md:text-5xl lg:text-[56px] font-extrabold text-text-primary leading-tight tracking-tight">
+            Selected engagements &amp; case studies.
+          </h2>
           <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mt-2">
             A sample of the systems we&rsquo;ve designed and shipped—platforms
             that handle real data, real users, and real business rules.
@@ -28,10 +32,16 @@ export default function WorkPage() {
         <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">🏥</div>
-              <div className="font-bold text-text-primary text-lg">Digital health platform</div>
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                🏥
+              </div>
+              <div className="font-bold text-text-primary text-lg">
+                Digital health platform
+              </div>
             </div>
-            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Real-time workflows</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">
+              Real-time workflows
+            </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
             Patient-facing portal, provider tools, and integrations with
@@ -42,10 +52,16 @@ export default function WorkPage() {
         <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">💳</div>
-              <div className="font-bold text-text-primary text-lg">Fintech SaaS</div>
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                💳
+              </div>
+              <div className="font-bold text-text-primary text-lg">
+                Fintech SaaS
+              </div>
             </div>
-            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Risk &amp; compliance</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">
+              Risk &amp; compliance
+            </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
             Transaction workflows, analytics, and reporting dashboards with
@@ -56,10 +72,16 @@ export default function WorkPage() {
         <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">🚗</div>
-              <div className="font-bold text-text-primary text-lg">Automotive operations</div>
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                🚗
+              </div>
+              <div className="font-bold text-text-primary text-lg">
+                Automotive operations
+              </div>
             </div>
-            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Process automation</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">
+              Process automation
+            </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
             Internal tools, integrations, and automation for inventory,
@@ -86,14 +108,6 @@ export default function WorkPage() {
           </div>
         </div>
       </section>
-
-      <footer className="border-t border-border-primary bg-obsidian-800 mt-24">
-        <div className="max-w-[1400px] mx-auto py-12 text-center">
-          <div className="border-t border-border-primary pt-8 text-center text-text-muted text-sm">
-            <p>© 2026 Barkaat Software Solutions. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
