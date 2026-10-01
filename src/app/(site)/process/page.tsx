@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/src/components/layout/Navbar";
 import {
   Search,
   Map,
@@ -24,7 +24,9 @@ export default function ProcessPage() {
       <Navbar />
       <section className="mt-16 lg:mt-[72px] py-16 md:py-24 px-5 md:px-10 bg-transparent flex justify-center text-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
-          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">OUR PROCESS</div>
+          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">
+            OUR PROCESS
+          </div>
           <h2 className="font-montserrat text-3xl md:text-5xl lg:text-[56px] font-extrabold text-text-primary leading-tight tracking-tight">
             Our Software Development Process
           </h2>
@@ -61,7 +63,9 @@ export default function ProcessPage() {
               <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
                 <Map size={18} className="text-accent-crimson" />
               </div>
-              <div className="font-bold text-text-primary text-lg">Planning & Strategy</div>
+              <div className="font-bold text-text-primary text-lg">
+                Planning & Strategy
+              </div>
             </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
@@ -77,7 +81,9 @@ export default function ProcessPage() {
               <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
                 <PenTool size={18} className="text-accent-crimson" />
               </div>
-              <div className="font-bold text-text-primary text-lg">Design & Prototyping</div>
+              <div className="font-bold text-text-primary text-lg">
+                Design & Prototyping
+              </div>
             </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
@@ -92,7 +98,9 @@ export default function ProcessPage() {
               <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
                 <Code2 size={18} className="text-accent-crimson" />
               </div>
-              <div className="font-bold text-text-primary text-lg">Development & Implementation</div>
+              <div className="font-bold text-text-primary text-lg">
+                Development & Implementation
+              </div>
             </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
@@ -108,7 +116,9 @@ export default function ProcessPage() {
               <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
                 <ShieldCheck size={18} className="text-accent-crimson" />
               </div>
-              <div className="font-bold text-text-primary text-lg">Testing & Quality Assurance</div>
+              <div className="font-bold text-text-primary text-lg">
+                Testing & Quality Assurance
+              </div>
             </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
@@ -123,7 +133,9 @@ export default function ProcessPage() {
               <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
                 <Rocket size={18} className="text-accent-crimson" />
               </div>
-              <div className="font-bold text-text-primary text-lg">Deployment & Launch</div>
+              <div className="font-bold text-text-primary text-lg">
+                Deployment & Launch
+              </div>
             </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
@@ -157,7 +169,8 @@ export default function ProcessPage() {
               Ready to start building?
             </h2>
             <p className="text-lg text-text-muted mb-8">
-              Let&rsquo;s discuss how our proven process can deliver your product on time and to spec.
+              Let&rsquo;s discuss how our proven process can deliver your
+              product on time and to spec.
             </p>
             <Link
               href="/contact"

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/src/components/layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Clients | Barkaat Software Solutions",

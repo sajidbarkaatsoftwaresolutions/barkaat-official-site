@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import NeuralMesh from "../NeuralMesh";
+import NeuralMesh from "../ui/NeuralMesh";
 
 export default function Hero() {
   return (

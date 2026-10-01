@@ -1,27 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "@/src/components/layout/Navbar";
 
 export const metadata: Metadata = {
-  title: "Insights | Barkaat Software Solutions",
+  title: "Solutions | Barkaat Software Solutions",
   description:
-    "Articles, notes, and engineering guides on architecture, developer experience, and product delivery.",
+    "Predefined solution patterns for SaaS, analytics dashboards, multi-tenant platforms, and integrations.",
 };
 
-export default function InsightsPage() {
+export default function SolutionsPage() {
   return (
     <>
       <Navbar />
       <section className="mt-16 lg:mt-[72px] py-16 md:py-24 px-5 md:px-10 bg-transparent flex justify-center text-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
-          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">INSIGHTS</div>
+          <div className="text-xs md:text-sm font-semibold tracking-[2px] uppercase text-accent-crimson">
+            SOLUTIONS
+          </div>
           <h2 className="font-montserrat text-3xl md:text-5xl lg:text-[56px] font-extrabold text-text-primary leading-tight tracking-tight">
-            Practical notes from real projects.
+            Opinionated patterns for modern platforms.
           </h2>
           <p className="text-base md:text-lg text-text-secondary leading-relaxed max-w-2xl mt-2">
-            No fluff. Just patterns, trade-offs, and lessons learned from
-            shipping products across different industries.
+            Re-usable blueprints for SaaS products, analytics dashboards,
+            multi-tenant systems, and integrations that save you months of
+            trial-and-error.
           </p>
         </div>
       </section>
@@ -30,42 +33,60 @@ export default function InsightsPage() {
         <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">🏗️</div>
-              <div className="font-bold text-text-primary text-lg">Architecture</div>
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                📦
+              </div>
+              <div className="font-bold text-text-primary text-lg">
+                B2B SaaS Foundations
+              </div>
             </div>
-            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Systems that age well</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">
+              Multi-tenant
+            </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
-            When to go modular vs. monolith, how to evolve schemas, and
-            how to keep complexity under control over time.
+            Authentication, billing, permissions, and tenant-aware data models
+            set up in a way that scales without rewrites.
           </div>
         </article>
 
         <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">💻</div>
-              <div className="font-bold text-text-primary text-lg">Developer experience</div>
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                📊
+              </div>
+              <div className="font-bold text-text-primary text-lg">
+                Analytics Dashboards
+              </div>
             </div>
-            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Happy teams ship more</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">
+              Data-first
+            </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
-            Tooling, conventions, and workflows that keep your team fast
-            without sacrificing quality.
+            Real-time dashboards, reporting views, and exports that turn raw
+            data into meaningful insights for your team and customers.
           </div>
         </article>
 
         <article className="bg-obsidian-800 border border-border-primary rounded-2xl p-6 md:p-8 transition-all duration-300 hover:border-accent-crimson hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(211,65,78,0.1)] flex flex-col gap-4">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">🚢</div>
-              <div className="font-bold text-text-primary text-lg">Product delivery</div>
+              <div className="text-2xl p-2 bg-accent-crimson/10 rounded-xl w-12 h-12 flex items-center justify-center shrink-0">
+                🔌
+              </div>
+              <div className="font-bold text-text-primary text-lg">
+                Integrations
+              </div>
             </div>
-            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">Ship with confidence</div>
+            <div className="text-xs font-semibold px-2.5 py-1 bg-accent-crimson/10 text-accent-crimson rounded-full shrink-0">
+              APIs · Webhooks
+            </div>
           </div>
           <div className="text-text-muted text-sm leading-relaxed">
-            How to break work into meaningful releases and align product,
-            design, and engineering.
+            Robust integration patterns for third-party APIs, webhooks, and
+            internal systems with proper monitoring and retries.
           </div>
         </article>
       </section>
@@ -74,16 +95,17 @@ export default function InsightsPage() {
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-section-xl font-bold text-neutral-light mb-4">
-              Want to learn more about scaling?
+              Ready to explore these patterns?
             </h2>
             <p className="text-lg text-text-muted mb-8">
-              Reach out to discuss how these patterns apply to your specific challenges.
+              Talk to us about how we can build a solution that fits your
+              business.
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-8 py-3 bg-neural-crimson text-white rounded-lg hover:bg-neural-crimson-light transition-colors"
             >
-              Schedule a Chat <ArrowRight size={20} />
+              Let&rsquo;s Talk <ArrowRight size={20} />
             </Link>
           </div>
         </div>

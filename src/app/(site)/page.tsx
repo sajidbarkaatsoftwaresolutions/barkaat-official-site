@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
-import NeuralMesh from "../components/NeuralMesh";
-import TelemetryRibbon from "../components/home/TelemetryRibbon";
-import Tabs, { Tab } from "../components/home/Tabs";
-import ServicesSection from "../components/home/ServicesSection";
+import NeuralMesh from "../../components/ui/NeuralMesh";
+import TelemetryRibbon from "../../components/home/TelemetryRibbon";
+import Tabs, { Tab } from "../../components/home/Tabs";
+import ServicesSection from "../../components/home/ServicesSection";
 import { ArrowRight } from "lucide-react";
-import Hero from "../components/home/Hero";
-import Cta from "../components/home/Cta";
+import Hero from "../../components/home/Hero";
+import Cta from "../../components/home/Cta";
 
 export const metadata: Metadata = {
   title:

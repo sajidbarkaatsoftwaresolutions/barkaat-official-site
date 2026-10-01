@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Target, Shield, Zap, Users } from "lucide-react";
-import NeuralMesh from "@/app/components/NeuralMesh";
 
 export const metadata: Metadata = {
   title: "About Us | Barkaat Software Solutions",
