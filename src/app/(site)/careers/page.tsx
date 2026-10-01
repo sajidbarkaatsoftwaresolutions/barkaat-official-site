@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "../../components/Navbar";
-import JobsTable from "../../components/JobsTable";
+import Navbar from "../../../components/layout/Navbar";
+import JobsTable from "../../../components/careers/JobsTable";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {

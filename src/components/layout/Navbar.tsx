@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="flex items-center gap-3 shrink-0">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/barkaat_software_solutions_logo.jpg"
+            src="images/barkaat_software_solutions_logo.jpg"
             alt="Barkaat Software Solutions Logo"
             width={40}
             height={40}
