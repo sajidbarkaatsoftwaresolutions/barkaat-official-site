@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="flex items-center gap-3 shrink-0">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="images/barkaat_software_solutions_logo.jpg"
+            src="/images/barkaat_software_solutions_logo.jpg"
             alt="Barkaat Software Solutions Logo"
             width={40}
             height={40}
